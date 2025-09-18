@@ -2,7 +2,7 @@
 title: 'Installer et utiliser une DB MSSQL'
 description: 'Avec une image Docker'
 pubDate: 'Sep 16 2025'
-heroImage: '../../assets/sql-server-docker-logo.png'
+heroImage: '/notes-blog/assets/sql-server-docker-logo.png'
 ---
 
 ### Prérequis

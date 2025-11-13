@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Valentin's Discoveries" href="https://valentinchion.github.io/rss.xml"><meta name="generator" content="Astro v5.13.7"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://valentinchion.github.io/notes-blog/docs/speckit/"><!-- Primary Meta Tags --><title>Spec-Kit Tutorial</title><meta name="title" content="Spec-Kit Tutorial"><meta name="description" content="J'ai utilisé spec-kit pour un side project perso."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://valentinchion.github.io/notes-blog/docs/speckit/"><meta property="og:title" content="Spec-Kit Tutorial"><meta property="og:description" content="J'ai utilisé spec-kit pour un side project perso."><meta property="og:image" content="https://valentinchion.github.io/notes-blog/assets/blog-placeholder-1.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://valentinchion.github.io/notes-blog/docs/speckit/"><meta property="twitter:title" content="Spec-Kit Tutorial"><meta property="twitter:description" content="J'ai utilisé spec-kit pour un side project perso."><meta property="twitter:image" content="https://valentinchion.github.io/notes-blog/assets/blog-placeholder-1.jpg"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/notes-blog/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/notes-blog/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media (max-width: 720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>Valentin&#39;s Discoveries</a></h2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/notes-blog" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Home </a>  <a href="/notes-blog/docs" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Docs </a>  <a href="/notes-blog/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <div class="social-links" data-astro-cid-3ef6ksr2> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-3ef6ksr2></path></svg> </a> </div> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img src="/notes-blog/assets/speckit.png" alt data-astro-cid-bvzihdzo="true" loading="lazy" decoding="async" fetchpriority="auto" width="1020" height="510"> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2025-11-09T23:00:00.000Z"> Nov 10, 2025 </time>  </div> <h1 data-astro-cid-bvzihdzo>Spec-Kit Tutorial</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>In this post, I will explain all my discoveries on spec-kit. This tool is amazing and here’s what I learned for now.</p>
+<h2 id="1-spec-kit">1. Spec-Kit ?</h2>
+<p>Spec-Kit is tool to get you started with <code>Spec-Driven Development</code> (SDD). Basically it provides you with a set of commands for your AI CLI Agent.</p>
+<p>It connects with most of the popular AI providers oriented in code generation such as OpenAI, Claude, Cursor, Github etc…</p>
+<p>It will basically orient your AI Agent with commands and specific prompts to start SDD.</p>
+<h3 id="a-pre-requisites">A. Pre-requisites</h3>
+<p>You need to have already installed an AI CLI Tool such as Claude which I used in my discovery.</p>
+<h3 id="b-how-to-install-it">B. How to install it ?</h3>
+<p>You should install it globally by doing so :</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">uv</span><span style="color:#9ECBFF"> tool</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> specify-cli</span><span style="color:#79B8FF"> --from</span><span style="color:#9ECBFF"> git+https://github.com/github/spec-kit.git</span></span></code></pre>
+<p>And that’s all ! You’re ready to use the speckit CLI.</p>
+<h3 id="c-how-to-use-it">C. How to use it ?</h3>
+<p>First of all, from an existing project or not, run the following command :</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">specify</span><span style="color:#9ECBFF"> init</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">PROJECT_NAM</span><span style="color:#E1E4E8">E</span><span style="color:#F97583">></span></span></code></pre>
+<p>It will ask for the AI you want to use and then start working.</p>
+<p>At the end of the command, you should have a new folder called <code>commands</code></p>
+<p>Those are all the commands provided by <code>Spec-Kit</code>. Let’s detail them one by one in the order they should be use.</p>
+<ul>
+<li>
+<p><code>/speckit.constitution</code> : This command is used to govern the AI Agent based on principles and guidelines you want to implement. (or is already implemented for existing project)</p>
+<ul>
+<li>Here was my prompt for the side project</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Create principles based on code quality and readability for future developers, user experience consistency and test-driven developments standards.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Include governance for how these principles should guide technical decisions and implementation choices.</span></span></code></pre>
+</li>
+<li>
+<p><code>/speckit.specify</code> : You should really focus on what and why here. You MUST not describe a tech stack. Let’s imagine you’re a product owner describing your project to a client.
+The first part of the command should focused on the general purpose of the project while the second part should be focused on the specific features you want to implement. The AI will generate User Stories and Acceptance Criteria for the project.</p>
+</li>
+<li>
+<p><code>/speckit.clarify</code> : This command is mandatory after you used specify. The AI will ask up to 5 questions to clarify the specifications created. It will updated all the specs and provide you a history of the question and answers session.</p>
+</li>
+</ul>
+<p>This command should also be used during the <code>implementation</code> part when you realize that the AI missed or you want to add other features.</p>
+<ul>
+<li><code>/speckit.plan</code> : Describe the tech stack you want to use and your architecture choices. If you are in an existing project, you can also asks the AI to analyze the existing codebase in the prompt and then provide only additionnal informations.</li>
+<li><code>/speckit.tasks</code> : This command will create all the tasks of the implementation based on the specs and the tech stack choosed.</li>
+<li><code>/speckit.implement</code> : This is when the magic happens. The AI starts to implement the project and create all the needed code for you.</li>
+</ul>
+<h2 id="2-lifecycle-of-a-project">2. Lifecycle of a project</h2>
+<p>The lifecycle of a project using <code>Spec-Kit</code> is the following :</p>
+<h5 id="a-constitution">a. Constitution</h5>
+<p>First, you must use the <code>/speckit.consitution</code> command to create the principles of your project. Once you are satisfied with the result, it does not need to be reused. You can always revised the version of your principles as the project evolves, but this is “transversal” to the lifecycle of the project.</p>
+<h5 id="b-specifications">b. Specifications</h5>
+<p>Then, you <code>/speckit.specify</code> To create specifications for your project. Here was mine :</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Create and develop an application called [Fortuna.](http://Fortuna.cv)CV (or Fortuna), a platform to handle job applications as a person looking for a job.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This webapp should helps users to organize and SIMPLIFY their jobs processes because we, most of the times, applies to way too much applications for human to be able to follow everyone of them.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The first feature should allow users to create and edit applications and have a global list on those applications. Let’s call this feature “Applications List”. This list should contain for the first version the following informations :</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- Name</span></span>
+<span class="line"><span>- Status which can be : First Contact, Job Interview Planned, Pending, Validated, Accepted, Refused</span></span>
+<span class="line"><span>- Current Step which is A free input</span></span>
+<span class="line"><span>- Salary as a Range but can be also a defined number</span></span>
+<span class="line"><span>- Date of the last contact.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The second feature is called “CV Handler”. This feature let users drop CV files as .pdf and can manage them (change name, delete…)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This then allow users to associate CVs to job applications created.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The third feature is called “Application Detail”. When a user click on one application in the “Applications List” they can see the detail of an application. There is a a first part which shows the same fields from the “Applications List” : Name, Status, Current Step, Salary, Date of the last contact which is a summary.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>If a user associated a CV to the application, he can click on a button/link “See CV Preview” which opens a sidebar on the right with a pdf viewer containing the CV.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The second part let the user see all the written exchanges made on this application. If there was meetings, it is also showed there as a timeline (from most recent to oldest). For the initial phase of the project, this will be a manual input, so there will be a “Plus button” somewhere letting him choose between a meeting and a written exchange, if it’s a meeting he can add the name of the people he met, the date of the meeting, and a little description of the meeting. For the written part, he must have somewhere to copy/past the exchange and he must fill the name (either him or the person he met) and the date of the exchange.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The fourth and last feature is called “Applications Dashboard”, This let the user see key informations :</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- A counter of job applications</span></span>
+<span class="line"><span>- A Line chart showing the number of applications made per week.</span></span>
+<span class="line"><span>- A Pie chart on the answers rate : In the last month, how many applications are in “First Contact” status for more than 4 days versus how many are not in “First Contact” status.</span></span>
+<span class="line"><span>    - This Pie chart part should have a trending indicator next to his title showing how the percentage of status not in “First Contact” increased or decreased</span></span>
+<span class="line"><span>- A Scatter Chart showing the salary proposed by companies (only for the applications that are not in a “First Contact” status) along time going.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Those are the core features of the application. For now, don’t include a login feature as we just want to test everything. You can just have a “faked” user to associate all the testing data to him.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Later we will add high added value features to the application.</span></span></code></pre>
+<h5 id="c-clarify-the-specifications">c. Clarify the specifications</h5>
+<p>Use the <code>/speckit.clarify</code> command to clarify the specifications. It will starts asking 5 questions and you’ll have to answer them.</p>
+<p>Then, you <code>/speckit.plan</code> for the techstack. This command is very different when you are in an existing project or not. I couldn’t test an existing codebase yet.</p>
+<h5 id="d-plan-the-tech-stack">d. Plan the tech stack</h5>
+<p>This command is like <code>/constitution</code> but for the tech stack. There’s no need to reuse apart when you want to update or evolve the tech stack.</p>
+<h5 id="e-create-the-tasks-for-the-agent">e. Create the tasks for the agent</h5>
+<p>Then, you <code>/speckit.tasks</code> to create the tasks for the implementation. This is very useful for the AI-Agent but there is not much to say, it’s very intuitive.</p>
+<h6 id="f-implement-the-project">f. Implement the project</h6>
+<p>Finally, you <code>/speckit.implement</code> to implement the project. This is the most important command. It will create all the needed code for you. It can take some time because you’ll go back-and-forth with the AI Agent to implement the project.</p>
+<p>To resume you have :</p>
+<ul>
+<li>On first run : <code>constitution</code> -> <code>specify</code> -> <code>clarify</code> -> <code>plan</code> -> <code>tasks</code> -> <code>implement</code></li>
+<li>On next runs : <code>specify</code> -> <code>clarify</code> -> <code>tasks</code> -> <code>implement</code></li>
+</ul>
+<h5 id="g-conclusion">g. Conclusion</h5>
+<p>So whenever you want to update your project, you can reuse the second lifecycle. Once you’ve done it a first time, it gets way easier ! It’s also reduce the time taken to implement since the core part is already done.</p>
+<h2 id="3-results">3. Results</h2>
+<p>Here was my first result :</p>
+<p><img alt="Fortuna CV." loading="lazy" decoding="async" fetchpriority="auto" width="3252" height="1878" src="/notes-blog/_astro/fortuna-v0.zLHsKXkI_1cUGG0.webp" ></p>
+<p>It was not pretty, but it was very functional.</p>
+<h3 id="a-remarks">a. Remarks</h3>
+<p>Here was my remarks on the first lifecycle :</p>
+<ol>
+<li>The AI Agent is not very good in User Experience. You should still have some work to be done after the implementation, mostly on that part.</li>
+<li>The AI Agent used Tailwind CSS for the styling. It worked but it did not try to create reusable components for layout and stuff like this. At the end you have a very messy code with a lot of class names everywhere. But this is something you can ask the AI Agent to train in order to get better with the plan and constitution commands.</li>
+<li>The AI Agent is very good at testing. It creates lots of tests and can coverage most of your code. It’s not perfect since it does not always understand why he is adding a test, but it saves you so much times anyway.</li>
+<li>The AI Agent is not good at creating config files and setup things. You should asks the AI to let you do it manually and then proceed by analyzing what you have done, it works way better.</li>
+</ol>
+<h3 id="b-data">b. Data</h3>
+<p>Here was the coverage of my project after the first lifecycle :</p>
+<p>% Coverage report from v8</p>
+<p>File | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s</p>
+<p>All files | 65.75 | 83.57 | 70.06 | 65.75 |<br>
+apps/web/src/app | 0 | 0 | 0 | 0 |<br>
+layout.tsx | 0 | 0 | 0 | 0 | 1-25<br>
+page.tsx | 0 | 0 | 0 | 0 | 1-7<br>
+apps/web/src/app/api/applications | 100 | 80 | 100 | 100 |<br>
+route.ts | 100 | 80 | 100 | 100 | 49-54<br>
+…eb/src/app/api/applications/[id] | 98.14 | 63.15 | 100 | 98.14 |<br>
+route.ts | 98.14 | 63.15 | 100 | 98.14 | 72-73<br>
+apps/web/src/app/api/cvs | 100 | 90 | 100 | 100 |<br>
+route.ts | 100 | 90 | 100 | 100 | 30<br>
+apps/web/src/app/api/cvs/[id] | 100 | 100 | 100 | 100 |<br>
+route.ts | 100 | 100 | 100 | 100 |<br>
+apps/web/src/app/api/timeline | 100 | 100 | 100 | 100 |<br>
+route.ts | 100 | 100 | 100 | 100 |<br>
+apps/web/src/app/api/timeline/[id] | 100 | 100 | 100 | 100 |<br>
+route.ts | 100 | 100 | 100 | 100 |<br>
+…timeline/entries/[applicationId] | 100 | 100 | 100 | 100 |<br>
+route.ts | 100 | 100 | 100 | 100 |<br>
+apps/web/src/app/applications | 0 | 0 | 0 | 0 |<br>
+ApplicationListClient.tsx | 0 | 0 | 0 | 0 | 1-62<br>
+page.tsx | 0 | 0 | 0 | 0 | 1-15<br>
+apps/web/src/app/applications/[id] | 0 | 0 | 0 | 0 |<br>
+ApplicationDetailClient.tsx | 0 | 0 | 0 | 0 | 1-89<br>
+page.tsx | 0 | 0 | 0 | 0 | 1-24<br>
+apps/web/src/app/cv-bank | 0 | 0 | 0 | 0 |<br>
+CvBankClient.tsx | 0 | 0 | 0 | 0 | 1-103<br>
+page.tsx | 0 | 0 | 0 | 0 | 1-16<br>
+apps/web/src/app/dashboard | 0 | 0 | 0 | 0 |<br>
+page.tsx | 0 | 0 | 0 | 0 | 1-97<br>
+apps/web/src/features/Applications | 94.66 | 85.08 | 77.77 | 94.66 |<br>
+AddTimelineDialog.tsx | 98 | 83.33 | 77.77 | 98 | 51-52,68-69<br>
+ApplicationDetail.tsx | 85.42 | 77.27 | 60 | 85.42 | …07-120,123-134
+ApplicationForm.tsx | 100 | 86.84 | 83.33 | 100 | …41,152,165,182
+ApplicationList.tsx | 94.3 | 84.21 | 80 | 94.3 | 39-40,96-100<br>
+AutocompleteInput.tsx | 95.23 | 100 | 80 | 95.23 | 52-54<br>
+TimelineList.tsx | 98.37 | 85.71 | 100 | 98.37 | 52-53<br>
+apps/web/src/features/CvBank | 57.42 | 91.3 | 50 | 57.42 |<br>
+CvList.tsx | 96.69 | 95.45 | 53.84 | 96.69 | 86-90,93-94<br>
+CvUploadZone.tsx | 0 | 0 | 0 | 0 | 1-145<br>
+apps/web/src/features/Hooks | 14.19 | 83.33 | 50 | 14.19 |<br>
+useApplicationAutocomplete.ts | 100 | 100 | 100 | 100 |<br>
+useIndexedDbStorage.ts | 0 | 0 | 0 | 0 | 1-139<br>
+apps/web/src/lib | 0 | 0 | 0 | 0 |<br>
+utils.ts | 0 | 0 | 0 | 0 | 1-6<br>
+packages/shared/src/db | 100 | 100 | 100 | 100 |<br>
+applications.ts | 100 | 100 | 100 | 100 |<br>
+cvs.ts | 100 | 100 | 100 | 100 |<br>
+timeline.ts | 100 | 100 | 100 | 100 |<br>
+packages/shared/src/db/<strong>mocks</strong> | 100 | 100 | 100 | 100 |<br>
+client.ts | 100 | 100 | 100 | 100 |<br>
+packages/shared/src/lib | 99 | 89.65 | 100 | 99 |<br>
+calculations.ts | 99.14 | 91.3 | 100 | 99.14 | 223-224<br>
+generators.ts | 100 | 100 | 100 | 100 |<br>
+validators.ts | 98.49 | 81.81 | 100 | 98.49 | 84-85<br>
+packages/ui/src/components | 0 | 0 | 0 | 0 |<br>
+MetricsCard.tsx | 0 | 0 | 0 | 0 | 1-24<br>
+packages/ui/src/components/Charts | 0 | 0 | 0 | 0 |<br>
+LineChart.tsx | 0 | 0 | 0 | 0 | 1-40<br>
+PieChart.tsx | 0 | 0 | 0 | 0 | 1-41<br>
+packages/ui/src/components/Layout | 0 | 0 | 0 | 0 |<br>
+Navbar.tsx | 0 | 0 | 0 | 0 | 1-44<br>
+index.ts | 0 | 0 | 0 | 0 | 1<br>
+packages/ui/src/components/shadcn | 69.39 | 86.2 | 65.78 | 69.39 |<br>
+Badge.tsx | 100 | 50 | 100 | 100 | 31<br>
+Button.tsx | 100 | 50 | 100 | 100 | 47<br>
+Card.tsx | 40.67 | 100 | 14.28 | 40.67 | …47,49-51,53-57
+Dialog.tsx | 95.12 | 100 | 80 | 95.12 | 13-15,21-23<br>
+Form.tsx | 0 | 0 | 0 | 0 | 1-138<br>
+Input.tsx | 100 | 100 | 100 | 100 |<br>
+Label.tsx | 100 | 100 | 100 | 100 |<br>
+Select.tsx | 87.03 | 100 | 70 | 87.03 | …,84-92,114-122
+Tabs.tsx | 100 | 100 | 100 | 100 |<br>
+Textarea.tsx | 100 | 100 | 100 | 100 |<br>
+index.ts | 0 | 0 | 0 | 0 | 1-9<br>
+packages/ui/src/lib | 100 | 100 | 100 | 100 |<br>
+utils.ts | 100 | 100 | 100 | 100 |<br>
+prisma | 0 | 0 | 0 | 0 |<br>
+seed.ts | 0 | 0 | 0 | 0 | 1-257</p>
+<h3 id="c-next-steps">c. Next steps</h3>
+<p>For my part, as I wanted to use the tool as much as possible, I made loops until I was satisfied with the result.</p>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+&copy; 2025 Your name here. All rights reserved.
+<div class="social-links" data-astro-cid-sz7xmlte> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/mastodon" data-astro-cid-sz7xmlte><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/twitter" data-astro-cid-sz7xmlte><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github" data-astro-cid-sz7xmlte><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-sz7xmlte></path></svg> </a> </div> </footer>  </body></html>

@@ -134,6 +134,114 @@ To resume you have :
 - On first run : `constitution` -> `specify` -> `clarify` -> `plan` -> `tasks` -> `implement`
 - On next runs : `specify` -> `clarify` -> `tasks` -> `implement`
 
-## 3. Conclusion
+##### g. Conclusion
 
 So whenever you want to update your project, you can reuse the second lifecycle. Once you've done it a first time, it gets way easier ! It's also reduce the time taken to implement since the core part is already done.
+
+## 3. Results
+
+Here was my first result :
+
+![Fortuna CV.](./fortuna-v0.png)
+
+It was not pretty, but it was very functional.
+
+### a. Remarks
+
+Here was my remarks on the first lifecycle :
+
+1. The AI Agent is not very good in User Experience. You should still have some work to be done after the implementation, mostly on that part.
+2. The AI Agent used Tailwind CSS for the styling. It worked but it did not try to create reusable components for layout and stuff like this. At the end you have a very messy code with a lot of class names everywhere. But this is something you can ask the AI Agent to train in order to get better with the plan and constitution commands.
+3. The AI Agent is very good at testing. It creates lots of tests and can coverage most of your code. It's not perfect since it does not always understand why he is adding a test, but it saves you so much times anyway.
+4. The AI Agent is not good at creating config files and setup things. You should asks the AI to let you do it manually and then proceed by analyzing what you have done, it works way better.
+
+### b. Data
+
+Here was the coverage of my project after the first lifecycle :
+
+% Coverage report from v8
+
+File | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+
+All files | 65.75 | 83.57 | 70.06 | 65.75 |  
+ apps/web/src/app | 0 | 0 | 0 | 0 |  
+ layout.tsx | 0 | 0 | 0 | 0 | 1-25  
+ page.tsx | 0 | 0 | 0 | 0 | 1-7  
+ apps/web/src/app/api/applications | 100 | 80 | 100 | 100 |  
+ route.ts | 100 | 80 | 100 | 100 | 49-54  
+ ...eb/src/app/api/applications/[id] | 98.14 | 63.15 | 100 | 98.14 |  
+ route.ts | 98.14 | 63.15 | 100 | 98.14 | 72-73  
+ apps/web/src/app/api/cvs | 100 | 90 | 100 | 100 |  
+ route.ts | 100 | 90 | 100 | 100 | 30  
+ apps/web/src/app/api/cvs/[id] | 100 | 100 | 100 | 100 |  
+ route.ts | 100 | 100 | 100 | 100 |  
+ apps/web/src/app/api/timeline | 100 | 100 | 100 | 100 |  
+ route.ts | 100 | 100 | 100 | 100 |  
+ apps/web/src/app/api/timeline/[id] | 100 | 100 | 100 | 100 |  
+ route.ts | 100 | 100 | 100 | 100 |  
+ ...timeline/entries/[applicationId] | 100 | 100 | 100 | 100 |  
+ route.ts | 100 | 100 | 100 | 100 |  
+ apps/web/src/app/applications | 0 | 0 | 0 | 0 |  
+ ApplicationListClient.tsx | 0 | 0 | 0 | 0 | 1-62  
+ page.tsx | 0 | 0 | 0 | 0 | 1-15  
+ apps/web/src/app/applications/[id] | 0 | 0 | 0 | 0 |  
+ ApplicationDetailClient.tsx | 0 | 0 | 0 | 0 | 1-89  
+ page.tsx | 0 | 0 | 0 | 0 | 1-24  
+ apps/web/src/app/cv-bank | 0 | 0 | 0 | 0 |  
+ CvBankClient.tsx | 0 | 0 | 0 | 0 | 1-103  
+ page.tsx | 0 | 0 | 0 | 0 | 1-16  
+ apps/web/src/app/dashboard | 0 | 0 | 0 | 0 |  
+ page.tsx | 0 | 0 | 0 | 0 | 1-97  
+ apps/web/src/features/Applications | 94.66 | 85.08 | 77.77 | 94.66 |  
+ AddTimelineDialog.tsx | 98 | 83.33 | 77.77 | 98 | 51-52,68-69  
+ ApplicationDetail.tsx | 85.42 | 77.27 | 60 | 85.42 | ...07-120,123-134
+ApplicationForm.tsx | 100 | 86.84 | 83.33 | 100 | ...41,152,165,182
+ApplicationList.tsx | 94.3 | 84.21 | 80 | 94.3 | 39-40,96-100  
+ AutocompleteInput.tsx | 95.23 | 100 | 80 | 95.23 | 52-54  
+ TimelineList.tsx | 98.37 | 85.71 | 100 | 98.37 | 52-53  
+ apps/web/src/features/CvBank | 57.42 | 91.3 | 50 | 57.42 |  
+ CvList.tsx | 96.69 | 95.45 | 53.84 | 96.69 | 86-90,93-94  
+ CvUploadZone.tsx | 0 | 0 | 0 | 0 | 1-145  
+ apps/web/src/features/Hooks | 14.19 | 83.33 | 50 | 14.19 |  
+ useApplicationAutocomplete.ts | 100 | 100 | 100 | 100 |  
+ useIndexedDbStorage.ts | 0 | 0 | 0 | 0 | 1-139  
+ apps/web/src/lib | 0 | 0 | 0 | 0 |  
+ utils.ts | 0 | 0 | 0 | 0 | 1-6  
+ packages/shared/src/db | 100 | 100 | 100 | 100 |  
+ applications.ts | 100 | 100 | 100 | 100 |  
+ cvs.ts | 100 | 100 | 100 | 100 |  
+ timeline.ts | 100 | 100 | 100 | 100 |  
+ packages/shared/src/db/**mocks** | 100 | 100 | 100 | 100 |  
+ client.ts | 100 | 100 | 100 | 100 |  
+ packages/shared/src/lib | 99 | 89.65 | 100 | 99 |  
+ calculations.ts | 99.14 | 91.3 | 100 | 99.14 | 223-224  
+ generators.ts | 100 | 100 | 100 | 100 |  
+ validators.ts | 98.49 | 81.81 | 100 | 98.49 | 84-85  
+ packages/ui/src/components | 0 | 0 | 0 | 0 |  
+ MetricsCard.tsx | 0 | 0 | 0 | 0 | 1-24  
+ packages/ui/src/components/Charts | 0 | 0 | 0 | 0 |  
+ LineChart.tsx | 0 | 0 | 0 | 0 | 1-40  
+ PieChart.tsx | 0 | 0 | 0 | 0 | 1-41  
+ packages/ui/src/components/Layout | 0 | 0 | 0 | 0 |  
+ Navbar.tsx | 0 | 0 | 0 | 0 | 1-44  
+ index.ts | 0 | 0 | 0 | 0 | 1  
+ packages/ui/src/components/shadcn | 69.39 | 86.2 | 65.78 | 69.39 |  
+ Badge.tsx | 100 | 50 | 100 | 100 | 31  
+ Button.tsx | 100 | 50 | 100 | 100 | 47  
+ Card.tsx | 40.67 | 100 | 14.28 | 40.67 | ...47,49-51,53-57
+Dialog.tsx | 95.12 | 100 | 80 | 95.12 | 13-15,21-23  
+ Form.tsx | 0 | 0 | 0 | 0 | 1-138  
+ Input.tsx | 100 | 100 | 100 | 100 |  
+ Label.tsx | 100 | 100 | 100 | 100 |  
+ Select.tsx | 87.03 | 100 | 70 | 87.03 | ...,84-92,114-122
+Tabs.tsx | 100 | 100 | 100 | 100 |  
+ Textarea.tsx | 100 | 100 | 100 | 100 |  
+ index.ts | 0 | 0 | 0 | 0 | 1-9  
+ packages/ui/src/lib | 100 | 100 | 100 | 100 |  
+ utils.ts | 100 | 100 | 100 | 100 |  
+ prisma | 0 | 0 | 0 | 0 |  
+ seed.ts | 0 | 0 | 0 | 0 | 1-257
+
+### c. Next steps
+
+For my part, as I wanted to use the tool as much as possible, I made loops until I was satisfied with the result.
